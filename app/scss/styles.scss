@@ -1,2 +1,319 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
+
+.callout {
+  font-family: $philly-sans;
+  // border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin: 5px 0 15;
+}
+
+.pull-right.medium {
+  @include mobile {
+    float: none !important;
+  }
+}
+
+.bodyContainer a {
+  color: rgb(95, 125, 136);
+}
+
+
+.relLinks {
+    padding: 25px;
+    background-color: #f6f6f6;
+    // margin: 30px 0;
+
+    div.name {
+      font-size: 16px;
+      font-family: $philly-sans;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+color: rgb(95, 125, 136);
+margin-bottom: -3px;
+    }
+
+    div.more {
+      font-size: 16px;
+      font-family: $philly-serif;
+      font-style: italic;
+      font-weight: 100px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    li.link {
+      margin: 5px 0 0;
+      // border-bottom: 1px solid #ddd;
+      font-size: 22px;
+      font-family: $philly-sans;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      a {
+        margin-top: 3px;
+      }
+    }
+    li.link::before {
+      content: "• ";
+      color: #000 !important;
+      font-size: 30px;
+      padding-right: 15px;
+    }
+}
+
+
+.exclude {
+  h3 {
+    font-family: $philly-sans;
+    letter-spacing: -0.5px;
+    line-height: 24px;
+  }
+}
+
+h3.subhead {
+  color:$project-yellow;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 34px;
+  padding: 20px 0;
+  font-weight: 200px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.note {
+    padding: 25px;
+    margin: 25px 0 50px;
+    background-color: #f6f6f6;
+}
+
+.inline-image {
+  margin: 25px 0;
+}
+
+
+.bodyContainer .col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+li {
+  display: flex;
+}
+
+li::before {
+  content: "• ";
+  color: $project-yellow;
+  font-size: 30px;
+  padding-right: 15px;
+}
+}
+
+.block {
+  width: 100%;
+  max-width: 300px;
+  border-top: 3px solid $project-yellow;
+  border-bottom: 3px solid $project-yellow;
+  color:#666;
+  text-transform: uppercase;
+  line-height: normal;
+  padding: 15px 0;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  &.pull-right {
+      text-align:right;
+  }
+  &.pull-left {
+      text-align:left;
+  }
+
+  .small {
+    font-size: 18px;
+  }
+  .medium {
+    font-size: 48px;
+  }
+  .large {
+    font-size: 120px;
+    color:$project-yellow;
+    @include mobile {
+      font-size: 90px;
+    }
+  }
+  .xlarge {
+    font-size: 140px;
+    line-height: 120px;
+    color:$project-yellow;
+    @include mobile {
+      font-size: 100px;
+    }
+  }
+}
+
+.pull-right {
+  margin: 12px 0 12px 25px;
+  @include mobile {
+    margin: 15px;
+  }
+
+&.medium {
+  max-width: 50%;
+  @include mobile {
+    max-width: 100%;
+  }
+}
+}
+
+.pull-left {
+  margin: 12px 25px 12px 0;
+  @include mobile {
+    margin: 15px;
+  }
+
+&.medium {
+  max-width: 50%;
+  @include mobile {
+    max-width: 100%;
+  }
+}
+}
+.headerSection {
+  .BackgroundImageCaption {
+    text-align: right;
+  }
+}
+
+
+.headerIntro {
+  position: relative;
+  width: auto;
+  height: auto;
+  &.top {
+    overflow-y: hidden;
+  @include display-flex;
+  @include tablet {
+        flex-wrap: wrap-reverse;
+  }
+
+}
+  background-color: #111;
+  position: relative;
+  text-align: center;
+  align-items: center;
+
+  .overlayText-container {
+    width: 50vw;
+    padding: 0 30px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    @include tablet {
+      width: 100% !important;
+    }
+
+    img {
+      width: 100%;
+      max-width: 40%;
+      @include tablet {
+        display: none;
+      }
+
+    }
+
+    h1 {
+      color: $project-yellow;
+      font-size: 4vh;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 4px;
+      margin-bottom: 5px;
+      @include tablet {
+        font-size: 3.5vh;
+      }
+    }
+    span {
+      color:#ccc;
+      font-weight: 200;letter-spacing: 4px;
+    }
+
+    h2 {
+      margin: 20px 0;
+      color: white;
+      font-size: 3vh;line-height: normal;
+      font-family: $philly-serif;
+      font-weight: 100;
+      padding: 0 40px;
+      @include tablet {
+        font-size: 2.5vh;
+        padding:0px;
+      }
+    }
+
+    .pub-text {
+      color: $project-yellow;
+      font-weight: 200;
+      letter-spacing: 2px;
+      margin: 15px 0;
+    }
+
+    .byline-text {
+      color:#ccc;
+      font-weight: 200;
+      letter-spacing: 2px;
+    }
+  }
+
+
+
+}
+
+
+.bullet {
+  color:$project-yellow !important;
+  text-align: center;
+  width: 100%;
+}
+
+.backgroundImage {
+  position: relative;
+  width: auto;
+  height: 100%;
+  height: 100%;
+  min-height: 750px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: #000;
+  @include tablet {
+    min-height: 500px;
+    min-height: 100%;
+    height: auto !important;
+    padding-bottom: percentage(800/1200)-5;
+    background-size: cover;
+    width: 100% !important;
+  }
+}
+
+#backgroundImage-1 {
+  // background-image: url("http://media.philly.com/images/RS_x_20180413_PROPUBLICA17_d.jpghttp://media.philly.com/images/sanctuary_protest_sessions2_1200.jpg");
+  background-position: 75%;
+background-size: cover;
+  width: 50vw;
+}
+
+// #backgroundImage-2 {
+//     background-image: url("http://media.philly.com/images/RS_1600x800_20180413_DSC_3479.JPG");
+//     background-position: center;
+//     @include tablet {
+//       background-size: cover;
+//     }
+// }
